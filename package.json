@@ -1,0 +1,26 @@
+{
+  "name": "gestor-corte-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test test/gestor.test.js",
+    "start": "node src/index.js",
+    "test:api": "node --test test/api.integration.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "express": "https://registry.npmjs.org/express/-/express-5.2.1.tgz",
+    "express-rate-limit": "https://registry.npmjs.org/express-rate-limit/-/express-rate-limit-8.7.0.tgz",
+    "pg": "https://registry.npmjs.org/pg/-/pg-8.23.0.tgz"
+  }
+}

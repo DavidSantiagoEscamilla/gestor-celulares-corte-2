@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: gestor-celulares-api
+    runtime: node
+    plan: free
+    buildCommand: unzip -o backend-source.zip && npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: gestor-celulares-db
+          property: connectionString
+databases:
+  - name: gestor-celulares-db
+    plan: free
